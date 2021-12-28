@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bobomee.binder_server">
+
+    <application>
+
+        <service
+            android:name="com.bobomee.aidl.BinderPoolService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="null">
+            <intent-filter>
+                <action android:name="com.bobomee.aidl.BinderPoolService"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.bobomee.aidl.activity.TranslucentActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.bobomee.aidl.activity.TranslucentActivity"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

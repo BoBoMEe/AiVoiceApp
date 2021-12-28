@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bobomee.module_map">
+
+    <application>
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="bAGkQnOYumhrToo2i99uwYCG4NOjmyTf" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <activity android:name="com.bobomee.module_map.MapActivity" />
+        <activity android:name="com.bobomee.module_map.ui.WNaviGuideActivity" />
+    </application>
+</manifest>

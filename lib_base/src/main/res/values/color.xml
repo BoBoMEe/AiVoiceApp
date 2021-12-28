@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@android:color/black</color>
+    <color name="colorPrimaryDark">@android:color/black</color>
+    <color name="colorAccent">#222222</color>
+
+    <color name="color_splash">#000101</color>
+
+    <color name="color_main_desc">#808080</color>
+
+    <color name="color_main_blue">#0294FE</color>
+    <color name="color_line">#545458</color>
+    <color name="color_window_weather">#EBEBEB</color>
+
+    <color name="color_chart_bg">#330294fe</color>
+
+    <color name="color_voice_line">#703FD0</color>
+
+</resources>

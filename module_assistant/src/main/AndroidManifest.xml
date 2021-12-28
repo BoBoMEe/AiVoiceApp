@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bobomee.module_assistant">
+
+    <application>
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="25246938" />
+
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="OMRDsbAz2Ker6Qj23iiXry0L" />
+
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="O8vU0o51cHjHVvOnlXzSBvLbgVwk05Pa" />
+
+        <activity android:name="com.bobomee.module_assistant.ui.AssistantActivity"/>
+
+        <service android:name="com.bobomee.module_assistant.service.VoiceService" />
+
+    </application>
+
+</manifest>

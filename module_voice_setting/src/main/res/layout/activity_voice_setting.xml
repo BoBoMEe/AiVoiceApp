@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/black"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--语速-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/colorAccent"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:text="@string/text_tts_speed"
+            android:textColor="@color/color_main_blue"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="36dp"
+            android:paddingEnd="36dp">
+
+            <SeekBar
+                android:id="@+id/bar_voice_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="2dp"
+                android:progressDrawable="@drawable/seekbar"
+                android:thumb="@drawable/select_seekbar" />
+
+        </LinearLayout>
+
+        <!--音量-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/colorAccent"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:text="@string/text_tts_volume"
+            android:textColor="@color/color_main_blue"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="36dp"
+            android:paddingEnd="36dp">
+
+            <SeekBar
+                android:id="@+id/bar_voice_volume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="2dp"
+                android:progressDrawable="@drawable/seekbar"
+                android:thumb="@drawable/select_seekbar" />
+
+        </LinearLayout>
+
+        <!--发音人-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="@color/colorAccent"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:text="@string/text_tts_people"
+            android:textColor="@color/color_main_blue"
+            android:textSize="16dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_voice_people"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
