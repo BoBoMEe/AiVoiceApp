@@ -20,7 +20,7 @@ import com.bobomee.module_assistant.engine.VoiceEngineAnalyze
 import com.bobomee.module_assistant.entity.AppConstants
 import com.bobomee.module_assistant.error.VoiceErrorCode
 import com.bobomee.module_assistant.helper.ContactHelper
-import com.bobomee.module_assistant.impl.OnNluAnalyzeListener
+import com.bobomee.module_assistant.listener.OnNluAnalyzeListener
 import com.bobomee.module_assistant.words.WordsTools
 import com.bobomee.lib_base.event.EventManager
 import com.bobomee.lib_base.event.MessageEvent

@@ -39,7 +39,7 @@ class SplashActivity : AppCompatActivity() {
             ModuleConfig.MODULE_MAP -> ARouterHelper.startActivity(ARouterHelper.PATH_MAP)
             ModuleConfig.MODULE_SETTING -> ARouterHelper.startActivity(ARouterHelper.PATH_SETTING)
             ModuleConfig.MODULE_WEATHER -> ARouterHelper.startActivity(ARouterHelper.PATH_WEATHER)
-            else -> this.shortToast( "无法识别" + application.packageName)
+            else -> this.shortToast( "无法识别${application.packageName}")
         }
     }
 }

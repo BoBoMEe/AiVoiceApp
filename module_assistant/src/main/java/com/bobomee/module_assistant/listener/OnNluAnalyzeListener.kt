@@ -1,4 +1,4 @@
-package com.bobomee.module_assistant.impl
+package com.bobomee.module_assistant.listener
 
 interface OnNluAnalyzeListener {
 

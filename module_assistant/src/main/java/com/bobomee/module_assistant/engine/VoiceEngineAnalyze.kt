@@ -1,6 +1,6 @@
 package com.bobomee.module_assistant.engine
 
-import com.bobomee.module_assistant.impl.OnNluAnalyzeListener
+import com.bobomee.module_assistant.listener.OnNluAnalyzeListener
 import com.bobomee.module_assistant.words.NluWords
 import org.json.JSONObject
 

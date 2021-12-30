@@ -8,7 +8,7 @@ import com.google.auto.service.AutoService
 @AutoService(IApp::class)
 class AppApp : IApp {
     override fun initApp(app: Application) {
-        //初始化语音服务
+        //初始化tts模板
         WordsTools.initTools(app)
     }
 }
