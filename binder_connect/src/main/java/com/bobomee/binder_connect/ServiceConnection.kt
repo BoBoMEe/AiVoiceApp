@@ -119,17 +119,20 @@ class ServiceConnection {
     }
 
     private fun findInternal(tag: String): IInterface? {
-        return when (tag) {
-            ServiceTag.ASR -> {
-                IAsrManager.Stub.asInterface(mBinderPool?.queryBinder(tag))
+        val queryBinder: IBinder? = mBinderPool?.queryBinder(tag)
+        return queryBinder?.let {
+            when (tag) {
+                ServiceTag.ASR -> {
+                    IAsrManager.Stub.asInterface(queryBinder)
+                }
+                ServiceTag.TTS -> {
+                    ITTSManager.Stub.asInterface(queryBinder)
+                }
+                ServiceTag.WAKE_UP -> {
+                    IWakeUpManager.Stub.asInterface(queryBinder)
+                }
+                else -> null
             }
-            ServiceTag.TTS -> {
-                ITTSManager.Stub.asInterface(mBinderPool?.queryBinder(tag))
-            }
-            ServiceTag.WAKE_UP -> {
-                IWakeUpManager.Stub.asInterface(mBinderPool?.queryBinder(tag))
-            }
-            else -> null
         }
     }
 
