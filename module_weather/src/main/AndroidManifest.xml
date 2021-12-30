@@ -3,7 +3,8 @@
 
     <application>
         <activity android:name="com.bobomee.module_weather.WeatherActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:label="${app_name}_weather"/>
         <activity android:name="com.bobomee.module_weather.ui.CitySelectActivity"/>
     </application>
 

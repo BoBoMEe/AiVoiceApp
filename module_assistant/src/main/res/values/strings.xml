@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">AI语音助手</string>
     <string name="text_voice_wakeup_text">小爱同学</string>
     <string name="text_voice_wakeup_tips">正在聆听…</string>
     <string name="text_voice_app_open">正在为你打开%s</string>

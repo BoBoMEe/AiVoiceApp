@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">语音设置</string>
-
     <string name="text_test_tts">大家好，我是小爱</string>
 
     <string name="text_tts_speed">语速</string>

@@ -34,8 +34,10 @@ internal fun Project.configureApp() = this.extensions.getByType<AppExtension>().
         applicationId = AppConfig.applicationId
         versionCode = AppConfig.versionCode
         versionName = AppConfig.versionName
+        flavorDimensions("app")
     }
     configureBase(project)
+    configureApplicationBase(project)
 }
 
 internal fun Project.configureLibrary() = this.extensions.getByType<LibraryExtension>().run {

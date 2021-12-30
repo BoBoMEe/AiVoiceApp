@@ -15,7 +15,8 @@
             android:name="com.baidu.speech.SECRET_KEY"
             android:value="O8vU0o51cHjHVvOnlXzSBvLbgVwk05Pa" />
 
-        <activity android:name="com.bobomee.module_assistant.ui.AssistantActivity"/>
+        <activity android:name="com.bobomee.module_assistant.ui.AssistantActivity"
+            android:label="${app_name}_assistant"/>
 
         <service android:name="com.bobomee.module_assistant.service.VoiceService" />
 

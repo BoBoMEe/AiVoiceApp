@@ -2,6 +2,7 @@
     package="com.bobomee.module_joke" >
 
     <application>
-        <activity android:name="com.bobomee.module_joke.JokeActivity"/>
+        <activity android:name="com.bobomee.module_joke.JokeActivity"
+            android:label="${app_name}_joke"/>
     </application>
 </manifest>

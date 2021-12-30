@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bobomee.module_voice_setting">
     <application>
-        <activity android:name="com.bobomee.module_voice_setting.VoiceSettingActivity"/>
+        <activity android:name="com.bobomee.module_voice_setting.VoiceSettingActivity"
+            android:label="${app_name}_voice_setting"/>
     </application>
 </manifest>

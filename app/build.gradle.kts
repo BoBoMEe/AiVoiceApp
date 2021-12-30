@@ -36,17 +36,6 @@ android {
 
 //依赖
 dependencies {
-    implementation(project(":lib_base"))
-    implementation(project(":binder_server"))
-
-    implementation(project(":module_assistant"))
-    implementation(project(":module_developer"))
-    implementation(project(":module_joke"))
-    implementation(project(":module_map"))
-    implementation(project(":module_setting"))
-    implementation(project(":module_weather"))
-    implementation(project(":module_voice_setting"))
-
     kapt(DependenciesConfig.AROUTER_COMPILER)
     kapt(DependenciesConfig.AUTOSERVICE_COMPILER)
 }

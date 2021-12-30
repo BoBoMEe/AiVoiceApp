@@ -6,12 +6,12 @@
 object KotlinConstants {
 
     //Gradle 版本
-    const val gradle_version = "7.0.2"
-    const val GRADLE_CLASSPATH = "com.android.tools.build:gradle:${gradle_version}"
+    const val GRADLE_VERSION = "7.0.2"
+    const val GRADLE_CLASSPATH = "com.android.tools.build:gradle:${GRADLE_VERSION}"
 
     //Kotlin 版本
-    const val kotlin_version = "1.6.0"
-    const val KOTLIN_GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}"
+    const val KOTLIN_VERSION = "1.6.0"
+    const val KOTLIN_GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
 }
 
 //应用配置
@@ -21,7 +21,7 @@ object AppConfig {
     const val compileSdkVersion = 29
 
     //包名
-    const val applicationId = "com.bobomee.aivoiceapp"
+    const val applicationId = ModuleConfig.MODULE_VOICE_APP
 
     //最小支持SDK
     const val minSdkVersion = 21
@@ -40,7 +40,7 @@ object AppConfig {
 object DependenciesConfig {
 
     //Kotlin基础库
-    const val STD_LIB = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinConstants.kotlin_version}"
+    const val STD_LIB = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${KotlinConstants.KOTLIN_VERSION}"
 
     //Android标准库
     const val APP_COMPAT = "androidx.appcompat:appcompat:1.1.0"
@@ -101,8 +101,8 @@ object DependenciesConfig {
 object ModuleConfig {
 
     //包名
-    const val PATH_ASSISTANT = "com.bobomee.module_assistant"
-    const val MODULE_ASSISTANT = "com.bobomee.module_voice_setting"
+    const val MODULE_VOICE_APP = "com.bobomee.aivoiceapp"
+    const val MODULE_ASSISTANT = "com.bobomee.module_assistant"
     const val MODULE_VOICE_SETTING = "com.bobomee.module_voice_setting"
     const val MODULE_DEVELOPER = "com.bobomee.module_developer"
     const val MODULE_JOKE = "com.bobomee.module_joke"

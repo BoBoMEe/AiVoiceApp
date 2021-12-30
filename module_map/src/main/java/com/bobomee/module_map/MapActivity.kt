@@ -41,7 +41,7 @@ class MapActivity : BaseActivity() {
     }
 
     override fun getTitleText(): String {
-        return getString(R.string.app_title_map)
+        return title.toString()
     }
 
     override fun isShowBack(): Boolean {

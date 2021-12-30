@@ -46,7 +46,7 @@ class JokeActivity : BaseActivity(), OnRefreshListener, OnRefreshLoadMoreListene
     }
 
     override fun getTitleText(): String {
-        return getString(R.string.app_title_joke)
+        return title.toString()
     }
 
     override fun isShowBack(): Boolean {

@@ -10,7 +10,8 @@
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote" />
-        <activity android:name="com.bobomee.module_map.MapActivity" />
+        <activity android:name="com.bobomee.module_map.MapActivity"
+            android:label="${app_name}_map"/>
         <activity android:name="com.bobomee.module_map.ui.WNaviGuideActivity" />
     </application>
 </manifest>

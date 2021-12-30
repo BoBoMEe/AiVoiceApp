@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">天气</string>
 
     <string name="text_select_city_title">选择城市</string>
     <string name="text_city_hot">热门</string>

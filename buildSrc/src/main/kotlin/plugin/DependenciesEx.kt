@@ -1,11 +1,43 @@
 package plugin
 
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.project
 
 
 internal fun Project.configureAppDeps() = dependencies.apply {
     add("implementation", (fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar")))))
+    add("implementation", project(":lib_base"))
 
+    //voice
+    add("voiceImplementation",project(":binder_server"))
+    add("voiceImplementation",project(":module_assistant"))
+    add("voiceImplementation",project(":module_developer"))
+    add("voiceImplementation",project(":module_joke"))
+    add("voiceImplementation",project(":module_map"))
+    add("voiceImplementation",project(":module_setting"))
+    add("voiceImplementation",project(":module_voice_setting"))
+    add("voiceImplementation",project(":module_weather"))
+
+    //assistant
+    add("assistantImplementation",project(":module_assistant"))
+
+    //developer
+    add("developerImplementation",project(":module_developer"))
+
+    //joke
+    add("jokeImplementation",project(":module_joke"))
+
+    //map
+    add("mapImplementation",project(":module_map"))
+
+    //setting
+    add("settingImplementation",project(":module_setting"))
+
+    //voiceSetting
+    add("voiceSettingImplementation",project(":module_voice_setting"))
+
+    //weather
+    add("weatherImplementation",project(":module_weather"))
 }
 
 internal fun Project.configureLibraryDeps()= dependencies.apply {

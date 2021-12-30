@@ -46,7 +46,7 @@ class AssistantActivity : BaseActivity() {
     }
 
     override fun getTitleText(): String {
-        return getString(R.string.app_name)
+        return title.toString()
     }
 
     override fun isShowBack(): Boolean {

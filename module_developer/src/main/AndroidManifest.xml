@@ -2,7 +2,8 @@
     package="com.bobomee.module_developer" >
 
     <application>
-        <activity android:name="com.bobomee.module_developer.DeveloperActivity"/>
+        <activity android:name="com.bobomee.module_developer.DeveloperActivity"
+            android:label="${app_name}_developer"/>
     </application>
 
 </manifest>

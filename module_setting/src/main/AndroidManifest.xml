@@ -2,7 +2,8 @@
     package="com.bobomee.module_setting" >
 
     <application>
-        <activity android:name="com.bobomee.module_setting.SettingActivity"/>
+        <activity android:name="com.bobomee.module_setting.SettingActivity"
+            android:label="${app_name}_setting"/>
     </application>
 
 </manifest>

@@ -22,7 +22,7 @@ class SettingActivity : BaseActivity() {
     }
 
     override fun getTitleText(): String {
-        return getString(R.string.app_title_system_setting)
+        return title.toString()
     }
 
     override fun isShowBack(): Boolean {

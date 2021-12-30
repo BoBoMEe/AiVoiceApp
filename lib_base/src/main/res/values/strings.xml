@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">小爱同学</string>
+    <string name="xiao_ai">小爱同学</string>
 
     <!--标题-->
     <string name="app_title_weather">天气</string>

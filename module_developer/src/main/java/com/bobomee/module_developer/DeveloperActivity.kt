@@ -31,7 +31,7 @@ class DeveloperActivity : BaseActivity() {
     }
 
     override fun getTitleText(): String {
-        return getString(R.string.app_title_developer)
+        return title.toString()
     }
 
     override fun isShowBack(): Boolean {

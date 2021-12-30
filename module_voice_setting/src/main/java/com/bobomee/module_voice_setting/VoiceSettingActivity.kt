@@ -25,7 +25,7 @@ class VoiceSettingActivity : BaseActivity(){
     }
 
     override fun getTitleText(): String {
-        return getString(R.string.app_title_voice_setting)
+        return title.toString()
     }
 
     override fun isShowBack(): Boolean {

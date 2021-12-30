@@ -1,5 +1,6 @@
 package plugin
 
+import com.android.build.gradle.AppExtension
 import com.android.build.gradle.BaseExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
@@ -35,5 +36,38 @@ internal fun BaseExtension.configureBase(project: Project) {
         kotlinOptions {
             jvmTarget = "1.8"
         }
+    }
+}
+
+internal fun AppExtension.configureApplicationBase(project: Project){
+    productFlavors {
+        create("voice"){
+            applicationId = AppConfig.applicationId
+        }
+        create("assistant"){
+            applicationId = ModuleConfig.MODULE_ASSISTANT
+        }
+        create("developer"){
+            applicationId = ModuleConfig.MODULE_DEVELOPER
+        }
+        create("joke"){
+            applicationId = ModuleConfig.MODULE_JOKE
+        }
+        create("map"){
+            applicationId = ModuleConfig.MODULE_MAP
+        }
+        create("setting"){
+            applicationId = ModuleConfig.MODULE_SETTING
+        }
+        create("voiceSetting"){
+            applicationId = ModuleConfig.MODULE_VOICE_SETTING
+        }
+        create("weather"){
+            applicationId = ModuleConfig.MODULE_WEATHER
+        }
+    }
+
+    productFlavors.all {
+        manifestPlaceholders["app_name"] = name
     }
 }
