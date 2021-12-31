@@ -28,11 +28,22 @@ MVP （MVC升级版本） m(data) v(ui) p(impl)->逻辑
 
 ## 4.构建组件化App
 
-App
+Module
 
-Module 笑话 地图 星座 语音设置 系统设置 天气 应用管理 开发者模式
+|  assistant  | voice_setting    |  developer  |  joke   |  map  |  setting   |  weather  |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|   语音助手  | 语音设置   | 开发者选项   | 笑话    | 地图    | 设置   |天气    |
 
-lib lib_base lib_network lib_voice
+app : 壳工程，根据不同的 productFlavors，build不同的apk
+- voice : 包含所有module
+- assistant ： 包含 语音助手 module ，在 voice 安装后，可远程调用 voice 服务（wakeUp，asr，tts）
+...
+  
+lib 
+
+|  lib_base| lib_network|  binder_server|  binder_connect |  
+|:--:|:--:|:--:|:--:|
+|   基础工具  |  网络请求 | binder远程服务  |  binder连接服务  |
 
 ## 5.服务保活
 
@@ -49,3 +60,11 @@ lib lib_base lib_network lib_voice
     - QQ - 微信
 - 5.前台服务
     - 我在前台运行，我绑定通知栏，在服务中创建通知栏
+  
+## 6. gradle 插件
+
+buildSrc + kotlin dsl + productFlavors
+
+## 7.binderPool 
+
+aidl + exported service + permission
