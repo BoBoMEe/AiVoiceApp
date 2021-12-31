@@ -7,6 +7,7 @@ import com.bobomee.aidl.callback.OnTTSResultListener
 import com.bobomee.lib_base.base.view.BaseActivity
 import com.bobomee.lib_base.base.adapter.CommonAdapter
 import com.bobomee.lib_base.base.adapter.CommonViewHolder
+import com.bobomee.lib_base.config.isBackJoke
 import com.bobomee.lib_base.helper.ARouterHelper
 import com.bobomee.lib_base.helper.VoiceHelper
 import com.bobomee.lib_base.utils.LogUtils
@@ -172,7 +173,7 @@ class JokeActivity : BaseActivity(), OnRefreshListener, OnRefreshLoadMoreListene
 
     override fun onDestroy() {
         super.onDestroy()
-        val isJoke = SpUtils.getBoolean("isJoke", true)
+        val isJoke = SpUtils.isBackJoke()
         if (!isJoke) {
             VoiceHelper.ttsStop()
         }

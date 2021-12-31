@@ -11,6 +11,8 @@ import android.text.format.Time
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.bobomee.lib_base.config.setWeatherCity
+import com.bobomee.lib_base.config.weatherCity
 import com.bobomee.lib_base.helper.ARouterHelper
 import com.bobomee.lib_base.utils.LogUtils
 import com.bobomee.lib_base.utils.SpUtils
@@ -77,7 +79,7 @@ class WeatherActivity : AppCompatActivity() {
                 loadWeatherData(city!!)
             } else {
                 //非语音进入,先查询本地
-                val localCity = SpUtils.getString("city","北京")
+                val localCity = SpUtils.weatherCity()
                 if (!TextUtils.isEmpty(localCity)) {
                     loadWeatherData(localCity)
                 } else {
@@ -97,7 +99,7 @@ class WeatherActivity : AppCompatActivity() {
     //加载天气数据
     private fun loadWeatherData(city: String) {
         currentCity = city
-        SpUtils.putString("city", currentCity)
+        SpUtils.setWeatherCity(currentCity)
 
         //标题
         tvTitle.text = city

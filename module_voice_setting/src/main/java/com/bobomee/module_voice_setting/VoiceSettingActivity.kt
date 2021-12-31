@@ -6,6 +6,7 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.bobomee.lib_base.base.view.BaseActivity
 import com.bobomee.lib_base.base.adapter.CommonAdapter
 import com.bobomee.lib_base.base.adapter.CommonViewHolder
+import com.bobomee.lib_base.config.*
 import com.bobomee.lib_base.helper.ARouterHelper
 import com.bobomee.lib_base.helper.VoiceHelper
 import com.bobomee.lib_base.utils.SpUtils
@@ -34,8 +35,8 @@ class VoiceSettingActivity : BaseActivity(){
 
     override fun initView() {
         //默认值
-        bar_voice_speed.progress = SpUtils.getInt("tts_speed", 5)
-        bar_voice_volume.progress = SpUtils.getInt("tts_volume", 5)
+        bar_voice_speed.progress = SpUtils.ttsPlaySpeed()
+        bar_voice_volume.progress = SpUtils.ttsVolume()
 
         //设置最大值
         bar_voice_speed.max = 15
@@ -69,10 +70,11 @@ class VoiceSettingActivity : BaseActivity(){
                     viewHolder.setText(R.id.mTvPeopleContent, model)
                     viewHolder.itemView.setOnClickListener {
                         mTtsPeopleIndex?.let {
-                            VoiceHelper.setPeople(it[position])
+                            val ttsPeople = it[position]
+                            VoiceHelper.setPeople(ttsPeople)
                             playTTS()
+                            SpUtils.setTtsPeople(ttsPeople)
                         }
-                        SpUtils.getInt("tts_people", position)
                     }
                 }
 
@@ -88,7 +90,7 @@ class VoiceSettingActivity : BaseActivity(){
         bar_voice_speed.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 VoiceHelper.setVoiceSpeed(progress.toString())
-                SpUtils.putInt("tts_speed", progress)
+                SpUtils.setTtsPlaySpeed(progress)
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
@@ -104,7 +106,7 @@ class VoiceSettingActivity : BaseActivity(){
         bar_voice_volume.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 VoiceHelper.setVoiceVolume(progress.toString())
-                SpUtils.putInt("tts_volume", progress)
+                SpUtils.setTtsVolume(progress)
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {

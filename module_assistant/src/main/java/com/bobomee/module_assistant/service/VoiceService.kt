@@ -14,6 +14,10 @@ import com.bobomee.aidl.callback.OnAsrResultListener
 import com.bobomee.aidl.callback.OnNluResultListener
 import com.bobomee.aidl.callback.OnTTSResultListener
 import com.bobomee.aidl.callback.OnWakeUpResultListener
+import com.bobomee.lib_base.config.isHello
+import com.bobomee.lib_base.config.ttsPeople
+import com.bobomee.lib_base.config.ttsPlaySpeed
+import com.bobomee.lib_base.config.ttsVolume
 import com.bobomee.module_assistant.adapter.ChatListAdapter
 import com.bobomee.module_assistant.data.ChatList
 import com.bobomee.module_assistant.engine.VoiceEngineAnalyze
@@ -108,7 +112,12 @@ class VoiceService : Service(), OnNluAnalyzeListener {
             override fun wakeUpReady() {
                 LogUtils.i("唤醒准备就绪")
 
-                val isHello = SpUtils.getBoolean("isHello", true)
+                //  设置配置的音色、语速、音量
+                VoiceHelper.setPeople(SpUtils.ttsPeople())
+                VoiceHelper.setVoiceSpeed(SpUtils.ttsPlaySpeed().toString())
+                VoiceHelper.setVoiceVolume(SpUtils.ttsVolume().toString())
+
+                val isHello = SpUtils.isHello()
                 if (isHello) {
                     addAiText("唤醒引擎准备就绪")
                 }

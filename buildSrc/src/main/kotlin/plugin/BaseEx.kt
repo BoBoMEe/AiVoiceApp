@@ -39,7 +39,7 @@ internal fun BaseExtension.configureBase(project: Project) {
     }
 }
 
-internal fun AppExtension.configureApplicationBase(project: Project){
+internal fun AppExtension.configureAppBase(project: Project){
     productFlavors {
         create("voice"){
             applicationId = AppConfig.applicationId

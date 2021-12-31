@@ -2,7 +2,6 @@ package plugin
 
 import AppConfig
 import com.android.build.gradle.*
-import com.android.build.api.dsl.*
 import com.android.build.gradle.AppExtension
 import com.android.build.gradle.LibraryExtension
 import org.gradle.api.Project
@@ -12,7 +11,6 @@ import org.gradle.kotlin.dsl.getByType
 internal fun PluginContainer.config(project: Project) {
     whenPluginAdded {
         when (this) {
-            //com.android.application
             is AppPlugin -> {
                 //com.android.application
                 project.configureAppPlugins()
@@ -37,7 +35,7 @@ internal fun Project.configureApp() = this.extensions.getByType<AppExtension>().
         flavorDimensions("app")
     }
     configureBase(project)
-    configureApplicationBase(project)
+    configureAppBase(project)
 }
 
 internal fun Project.configureLibrary() = this.extensions.getByType<LibraryExtension>().run {
